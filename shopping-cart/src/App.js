@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
@@ -7,13 +7,13 @@ import Cart from "./components/Cart";
 
 const App = () => {
   return (
-    <div class="app">
-      <NavigationBar/>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </HashRouter>
+    <div className="app">
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 };
